@@ -1,1 +1,31 @@
-{}
+{
+  "config": {
+    "error": {
+      "auth": "Unable to authenticate with such credentials.",
+    },
+    "step": {
+      "user": {
+        "data": {
+          "email": "Saures user email",
+          "password": "Saures user passwor"
+        },
+        "description": "Enter your saures credentials",
+        "title": "Authentication"
+      }
+    }
+  },
+  "options": {
+    "error": {
+      "auth": "Unable to authenticate with such credentials."
+    },
+    "step": {
+      "init": {
+        "title": "Manage locations",
+        "data": {
+          "locations": "Existing locations"
+        },
+        "description": "Add or remove managed locations"
+      }
+    }
+  }
+}
