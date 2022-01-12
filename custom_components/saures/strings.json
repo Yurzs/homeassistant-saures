@@ -1,7 +1,7 @@
 {
   "config": {
     "error": {
-      "auth": "Unable to authenticate with such credentials.",
+      "auth": "Unable to authenticate with such credentials."
     },
     "step": {
       "user": {
