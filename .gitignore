@@ -5,3 +5,4 @@
 .pyo
 
 poetry.lock
+.idea
