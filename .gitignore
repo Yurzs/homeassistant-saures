@@ -1,1 +1,7 @@
-/homeassistant/
+*venv*
+*pycache*
+
+.pyc
+.pyo
+
+poetry.lock
