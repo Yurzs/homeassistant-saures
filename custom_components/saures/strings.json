@@ -7,7 +7,7 @@
       "user": {
         "data": {
           "email": "Saures user email",
-          "password": "Saures user passwor"
+          "password": "Saures user password"
         },
         "description": "Enter your saures credentials",
         "title": "Authentication"
