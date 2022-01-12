@@ -1,0 +1,11 @@
+{
+  "codeowners": ["@yurzs"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/Yurzs/homeassistant-saures",
+  "domain": "saures",
+  "iot_class": "cloud_polling",
+  "name": "SAURES",
+  "requirements": ["saures_api_client==0.1"],
+  "version": "0.1"
+}
