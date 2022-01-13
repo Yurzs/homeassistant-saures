@@ -74,7 +74,7 @@ class SauresConfigFlow(homeassistant.config_entries.ConfigFlow, domain=const.DOM
 
         locations_schema = voluptuous.Schema(
             {
-                voluptuous.Optional(loc.id, default=True): config_validation.boolean
+                voluptuous.Optional(loc.id, msg=loc.label, default=True): config_validation.boolean
                 for loc in await self.saures_user.get_locations()
             }
         )
