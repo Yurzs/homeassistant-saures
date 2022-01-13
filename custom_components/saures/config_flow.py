@@ -2,14 +2,11 @@ import typing
 
 import homeassistant.config_entries
 import homeassistant.core
-from homeassistant.helpers import config_validation
-from homeassistant.helpers.entity_registry import (
-    async_entries_for_config_entry,
-    async_get_registry,
-)
-from saures_api_client import SauresAPIClient, types
 import saures_api_client.exceptions
 import voluptuous
+from homeassistant.helpers import config_validation
+from homeassistant.helpers.entity_registry import async_entries_for_config_entry, async_get_registry
+from saures_api_client import SauresAPIClient, types
 
 from . import const
 
@@ -77,13 +74,13 @@ class SauresConfigFlow(homeassistant.config_entries.ConfigFlow, domain=const.DOM
 
         locations_schema = voluptuous.Schema(
             {
-                voluptuous.Optional(loc.label): config_validation.boolean
+                voluptuous.Optional(loc.id, default=True): config_validation.boolean
                 for loc in await self.saures_user.get_locations()
             }
         )
 
         return self.async_show_form(
-            step_id="locations", data_schema=locations_schema, errors=errors
+            step_id=const.LOCATIONS, data_schema=locations_schema, errors=errors
         )
 
     @staticmethod
